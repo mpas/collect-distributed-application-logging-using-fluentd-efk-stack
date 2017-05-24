@@ -7,6 +7,7 @@
 * HTTPie installed (used to generate data)
 
 ### Build the required Docker images
+
 * Execute `./build-docker-images`
 
 This will build the following images:
