@@ -1,6 +1,12 @@
-# Demo Structure
+# General
 
-## Prerequisites
+This project is used in a talk:
+
+**Collect Distributed Application Logging using the EFK stack**
+
+## Demo Structure
+
+### Prerequisites
 
 * Docker installed
 * Docker Compose installed
@@ -18,14 +24,14 @@ This will build the following images:
 
 ---
 
-## Step 1: Run Fluentd with monitoring agent
+### Step 1: Run Fluentd with monitoring agent
 
 * Start Fluentd using docker-compose > dc up
 * Show docker-compose.yml > including portmapping
 * Show Fluent config > fluent.conf
 * Navigate to <http://localhost:24220/api/plugins.json> > show the default healtcheck
 
-## Step 2: Capture input from Docker container
+### Step 2: Capture input from Docker container
 
 * Start Fluentd using docker-compose > dc up
 * Show docker-compose.yml > including portmapping
@@ -38,14 +44,14 @@ This will build the following images:
 * Show Fluent config > fluent.conf
 * Stop Fluentd and enable dummy data in config > restart to show dummy data
 
-## Step 3: Capture HTTP access logs
+### Step 3: Capture HTTP access logs
 
 * Start Fluentd using docker-compose > dc up
 * Explain fluent.conf with the added `filter`
 * Generate some data by navigating to <http://localhost/> or by executing `./generate-load.sh`
 * Show the results in Fluentd log
 
-## Step 4: Capture HTTP access logs and store in MongoDB
+### Step 4: Capture HTTP access logs and store in MongoDB
 
 * Start Fluentd using docker-compose > dc up
 * Exec inside the container that runs mongo
@@ -58,7 +64,7 @@ This will build the following images:
   * `use fluentd`
   * `db.test.find()
 
-## Step 5: Capture HTTPD access logs and store in ELK stack
+### Step 5: Capture HTTPD access logs and store in ELK stack
 
 * Start Fluentd using docker-compose > dc up
 * Generate some data by navigating to <http://localhost/> or by executing `./generate-load.sh
@@ -73,7 +79,7 @@ This will build the following images:
   * Create PIE vizualisation
   * Split Slices > Aggregation > Terms > Field > agent
 
-## Step 6: Capture Spring Boot logs and store in the ELK stack including intail
+### Step 6: Capture Spring Boot logs and store in the ELK stack including intail
 
 * Start Fluentd using docker-compose > dc up
 * Explain the Spring Boot application
@@ -81,7 +87,7 @@ This will build the following images:
 * Navigate to <http://localhost:5601/> and show the data that flows in
   * Filter on possibilities
 
-## Step 7: HA Setup
+### Step 7: HA Setup
 * Start Fluentd using docker-compose > dc up
 * Explain the Log Collector / Log Aggregator
 * Show the Fluentd config for Collector / Aggregator
