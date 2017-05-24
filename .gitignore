@@ -6,6 +6,7 @@
 .settings
 logs/
 build/
+
 # Log file
 *.log
 
