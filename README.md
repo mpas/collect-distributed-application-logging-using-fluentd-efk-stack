@@ -9,7 +9,7 @@
 ### Build the required Docker images
 * Execute `./build-docker-images`
 
-This will build 2 images:
+This will build the following images:
 
 * **Fluentd Docker image**: with plugins that are used during the demo
 * **Apache Httpd Docker image**: modified version of the HTTPD image using the combined logging format
