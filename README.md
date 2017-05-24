@@ -4,6 +4,7 @@
 
 * Docker installed
 * Docker Compose installed
+* HTTPie installed (used to generate data)
 
 ### Build the required Docker images
 * Execute `./build-docker-images`
