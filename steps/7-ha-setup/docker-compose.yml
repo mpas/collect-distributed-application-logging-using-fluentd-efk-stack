@@ -1,0 +1,33 @@
+version: '2'
+services:
+
+  fluentd-collector:
+    container_name: fluentd-collector
+    image: fluentd-demo
+    links:
+      - fluentd-aggregator-1
+      - fluentd-aggregator-2
+    volumes:
+      - $PWD/collector:/fluentd/etc
+    ports:
+      - "8888:8888"
+      - "24224:24224"
+      - "24224:24224/udp"
+
+  fluentd-aggregator-1:
+    container_name: fluentd-aggregator-1
+    image: fluentd-demo
+    volumes:
+      - $PWD/aggregator:/fluentd/etc
+    ports:
+      - "25224:24224"
+      - "25224:24224/udp"
+
+  fluentd-aggregator-2:
+    container_name: fluentd-aggregator-2
+    image: fluentd-demo
+    volumes:
+      - $PWD/aggregator:/fluentd/etc
+    ports:
+      - "26224:24224"
+      - "26224:24224/udp"      

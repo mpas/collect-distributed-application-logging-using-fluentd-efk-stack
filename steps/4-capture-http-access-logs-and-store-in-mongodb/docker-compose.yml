@@ -1,0 +1,31 @@
+version: '2'
+services:
+
+  fluentd:
+    container_name: fluentd
+    image: fluentd-demo
+    volumes:
+      - $PWD/:/fluentd/etc
+    links:
+      - mongodb
+    ports:
+      - "24224:24224"
+
+  httpd:
+    container_name: httpd
+    image: http-demo
+    ports:
+      - "80:80"
+    links:
+      - fluentd
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: httpd.access
+
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - "27017:27017"

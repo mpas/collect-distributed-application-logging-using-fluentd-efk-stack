@@ -1,0 +1,10 @@
+version: '2'
+services:
+
+  fluentd:
+    container_name: fluentd
+    image: fluentd-demo
+    volumes:
+      - $PWD/:/fluentd/etc
+    ports:
+      - "24220:24220"
