@@ -59,10 +59,11 @@ This will build the following images:
 * Start Mongo shell
   * `mongo`
   * `show dbs
-  * See that the fluentd database is not there
-  * Generate some data by navigating to <http://localhost/> or by executing `./generate-load.sh
+    * See that the fluentd database is not there
+    * Generate some data by navigating to <http://localhost/> or by executing `./generate-load.sh
   * `use fluentd`
-  * `db.test.find()
+  * `db.test.find()`
+  * `db.test.count()`
 
 ### Step 5: Capture HTTPD access logs and store in ELK stack
 
