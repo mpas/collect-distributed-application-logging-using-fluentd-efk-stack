@@ -11,8 +11,8 @@ services:
     ports:
       - "24224:24224"
 
-  springboot-demo-fluentd:
-    container_name: springboot-demo-fluentd
+  spring-boot-demo-fluentd:
+    container_name: spring-boot-demo-fluentd
     image: springboot-demo-fluentd
     ports:
       - "8080:8080"
