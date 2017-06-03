@@ -14,5 +14,5 @@ cd -
 echo ""
 echo "Building SpringBoot demo image"
 echo "--------------------------------------------------------------------------------"
-cd ./docker-images/spring-boot-demo
+cd ./docker-images/spring-boot-fluentd-demo
 bash build.sh

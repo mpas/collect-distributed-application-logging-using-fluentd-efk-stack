@@ -28,7 +28,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-String dockerImageName = "spring-boot-demo-fluentd"
+String dockerImageName = "spring-boot-fluentd-demo"
 
 task buildDockerImage(type:Exec) {
 	group = 'docker'
