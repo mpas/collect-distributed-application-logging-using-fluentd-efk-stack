@@ -13,7 +13,7 @@ services:
 
   httpd:
     container_name: httpd
-    image: http-demo
+    image: httpd-demo
     ports:
       - "80:80"
     links:
